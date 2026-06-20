@@ -1,5 +1,5 @@
 body {
-  min-height: 2000px;
+  min-height: 100vh;
 }
 
 .navbar-static-top {
@@ -14,6 +14,51 @@ a.navbar-brand {
   font-weight: bold;
   font-size: 24px;
   /* letter-spacing: 2px; */
+}
+ 
+.container-fluid > .row{
+    padding: 60px 50px 0 50px;
+  }
+
+img{
+    width: 400px;
+    /* height: 550px; */
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
+
+h1 {
+    margin-top:45px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+  }
+
+h1 ~ .row{
+    padding-top:5px;
+    background-color: #d2e2f0;
+}
+
+label{
+    font-family: serif;
+    font-size: 20px;
+}
+
+h1, label{
+    color: #343252;
+}
+
+input[type="text"], textarea.form-contol {
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+textarea.form-control {
+    resize: none;
+    height: 200px;
+    background-color: #ffede5;
 }
 
 .footer {
