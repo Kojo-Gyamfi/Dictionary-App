@@ -4,11 +4,11 @@ import datetime
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
+def index():
     return render_template('index.html')
 
 @app.route('/dashboard')
-def about():
+def dashboard():
     return render_template('dashboard.html')
 
 if __name__ == '__main__':
