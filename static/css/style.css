@@ -47,7 +47,11 @@ padding-left: 60px;
   overflow-x: hidden;
 }
 
-.container-fluid > .row{
+.side-active{
+  text-shadow: 2px 2px;
+}
+
+.container-fluid > .row {
     padding: 60px 50px 0 50px;
   }
 

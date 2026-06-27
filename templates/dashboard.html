@@ -1,37 +1,39 @@
-{% extends "base.html" %}
-
-{% block title %}
+{% extends "base.html" %} {% block title %}
 <title>Dictionary App - Dashboard</title>
 {% endblock %} 
-
-{% block dash_active %}
-class="active"
+{% block dash_active %} 
+class="active" 
 {% endblock %} 
-
 {% block content %}
- <div class="row">
-    <h2>Word Index</h2>
-    <div class="col-md-2 sidenav">
-        <a href="#">All Words</a>
-        <a href="#">Add New</a>
-    </div>
-    <div class="col-md-10">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>SN</th>
-                    <th>Word</th>
-                    <th>Meaning</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Flask</td>
-                    <td>A web development framework.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
- </div>
+<div class="row">
+  <h2>Word Index</h2>
+  <div class="col-md-2 sidenav">
+    <a href="#" class="side-active">All Words</a>
+    <a href="#">Add New</a>
+  </div>
+  <div class="col-md-10">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>SN</th>
+          <th>Word</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for word in words %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ word ['word']}}</td>
+          <td>{{ word ['meaning']}}</td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="3">The dictionary has no words at the moment, please try again later</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}
