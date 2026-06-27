@@ -9,5 +9,29 @@ class="active"
 {% endblock %} 
 
 {% block content %}
-<h1 style="color: Blue">This is the Dashboard page</h1>
+ <div class="row">
+    <h2>Word Index</h2>
+    <div class="col-md-2 sidenav">
+        <a href="#">All Words</a>
+        <a href="#">Add New</a>
+    </div>
+    <div class="col-md-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>SN</th>
+                    <th>Word</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Flask</td>
+                    <td>A web development framework.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ </div>
 {% endblock %}

@@ -15,7 +15,38 @@ a.navbar-brand {
   font-size: 24px;
   /* letter-spacing: 2px; */
 }
- 
+
+/* dashboard */
+.row > h2 {
+  margin-top: -50px;
+  margin-left: 275px;
+  color: #343252;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+.sidenav > a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.main {
+overflow-y:scroll;
+height: 70vh;
+padding-left: 60px;
+}
+
+.sidenav{
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-right: solid black 5px;
+  overflow-x: hidden;
+}
+
 .container-fluid > .row{
     padding: 60px 50px 0 50px;
   }
