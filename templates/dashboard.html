@@ -8,10 +8,10 @@ class="active"
 <div class="row">
   <h2>Word Index</h2>
   <div class="col-md-2 sidenav">
-    <a href="#" class="side-active">All Words</a>
-    <a href="#">Add New</a>
+    <a href="#" class="side-active"id="word-index">All Words</a>
+    <a href="#" id="word-add">Add New</a>
     <div>
-      <form action="">
+      <form action="javascript:0" id="word-form">
           <div class="form-group">
             <label for="word">Enter a word:</label>
             <input
@@ -27,16 +27,16 @@ class="active"
                 <textarea 
                 class="form-control" 
                 id="meaning" 
-                placeholder="Type the meaning of the word here: "></textarea>
+                placeholder="Type the meaning of the word here:" required></textarea>
             </div>
             <button 
             type="submit" 
-            class="btn btn-primary btn-block btn-lg" 
+            class="btn btn-primary btn-block btn-lg" id="submit"
             style="margin-top: 10px;">
                 Submit</button>
             <button 
             type="button" 
-            class="btn btn-warning btn-block btn-lg" 
+            class="btn btn-warning btn-block btn-lg" id="cancel"
             style="margin-top: 10px;">
                 Cancel</button>
       </form>
@@ -57,6 +57,8 @@ class="active"
           <td>{{ loop.index }}</td>
           <td>{{ word ['word']}}</td>
           <td>{{ word ['meaning']}}</td>
+          <td><button class="btn btn-sm btn-success btn-block">Edit</button></td>
+          <td><button class="btn btn-sm btn-danger btn-block">Delete</button></td>
         </tr>
         {% else %}
         <tr>
