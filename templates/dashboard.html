@@ -10,6 +10,37 @@ class="active"
   <div class="col-md-2 sidenav">
     <a href="#" class="side-active">All Words</a>
     <a href="#">Add New</a>
+    <div>
+      <form action="">
+          <div class="form-group">
+            <label for="word">Enter a word:</label>
+            <input
+              type="text"
+              class="form-control"
+              name="word"
+              id="word"
+              placeholder="Type in the word here:"
+              required />
+          </div>
+           <div class="form-group">
+                <label for="meaning">Meaning:</label>
+                <textarea 
+                class="form-control" 
+                id="meaning" 
+                placeholder="Type the meaning of the word here: "></textarea>
+            </div>
+            <button 
+            type="submit" 
+            class="btn btn-primary btn-block btn-lg" 
+            style="margin-top: 10px;">
+                Submit</button>
+            <button 
+            type="button" 
+            class="btn btn-warning btn-block btn-lg" 
+            style="margin-top: 10px;">
+                Cancel</button>
+      </form>
+    </div>
   </div>
   <div class="col-md-10">
     <table class="table">
