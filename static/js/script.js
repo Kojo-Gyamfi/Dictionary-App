@@ -37,4 +37,20 @@ window.onload = function () {
   $('#cancel').click(function () {
     location.reload();
   })
+
+  // Delete operation
+   $(".delete").click(function () {
+     let word_id = $(this).attr("id");
+
+     $.ajax({
+       url: "/word/" + word_id + "/delete",
+       type: "POST",
+       success: function (data) {
+         location.reload();
+       },
+       error: function (err) {
+         console.log(err);
+       },
+     });
+   });
 };

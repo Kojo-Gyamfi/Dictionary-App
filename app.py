@@ -52,5 +52,16 @@ def add_word():
 
     return json.dumps('success')
 
+@app.route('/word/<id>/delete', methods=['POST'])
+def delete_word(id):
+    word_id = id
+    conn = mysql.get_db()
+    cur = conn.cursor()
+    cur.execute('delete from word where id=%s', (word_id))
+    conn.commit()
+    cur.close()
+
+    return json.dumps('success')
+
 if __name__ == '__main__':
     app.run(debug=True)

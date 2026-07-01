@@ -57,8 +57,8 @@ class="active"
           <td>{{ loop.index }}</td>
           <td>{{ word ['word']}}</td>
           <td>{{ word ['meaning']}}</td>
-          <td><button class="btn btn-sm btn-success btn-block">Edit</button></td>
-          <td><button class="btn btn-sm btn-danger btn-block">Delete</button></td>
+          <td><button class="btn btn-sm btn-success btn-block edit" id="{{ word['id'] }}">Edit</button></td>
+          <td><button class="btn btn-sm btn-danger btn-block delete" id="{{ word['id'] }}">Delete</button></td>
         </tr>
         {% else %}
         <tr>
