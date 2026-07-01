@@ -57,6 +57,8 @@ class="active"
           <td>{{ loop.index }}</td>
           <td>{{ word ['word']}}</td>
           <td>{{ word ['meaning']}}</td>
+          <td class="edit-word"><input type="text"></td>
+          <td class="edit-meaning"><textarea name="" id=""></textarea></td>
           <td><button class="btn btn-sm btn-success btn-block edit" id="{{ word['id'] }}">Edit</button></td>
           <td><button class="btn btn-sm btn-danger btn-block delete" id="{{ word['id'] }}">Delete</button></td>
         </tr>

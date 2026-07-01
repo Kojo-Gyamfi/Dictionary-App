@@ -1,5 +1,6 @@
 window.onload = function () {
     $('#word-form').hide();
+    $('.edit-word, .edit-meaning').hide();
 
     $('#word-index').click(function() {
         location.reload();
@@ -53,4 +54,10 @@ window.onload = function () {
        },
      });
    });
+
+   //update operation
+     $(".edit").click(function () {
+        let parent = $(this).parents('tr');
+       parent.find(".edit-word, .edit-meaning").show();
+     });
 };
